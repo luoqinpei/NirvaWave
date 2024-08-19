@@ -3,4 +3,4 @@
 
 ## Starting up the Graphic User Interface
 In order to work directly with the GUI, you need to pull this repository and open up the 	**main_app.mlapp** in **appdesigner** in MATLAB. appdesigner environemnt can be opened by running the `appdesigner` in the MATLAB command line.
-![Alt text](media/startingup.png)
+![Alt text](startingup.png)
