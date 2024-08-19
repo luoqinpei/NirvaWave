@@ -1,0 +1,27 @@
+function tr =  steering2(freq,Y,W0,steering_angle1,steering_angle2)
+aperture = zeros(size(Y));
+tr = zeros(size(Y));
+top_limit1 = W0 - 0.15;
+bottom_limit1 = -0.15;
+[~,top_idx1] = min(abs(top_limit1 - Y));
+[~,bottom_idx1] = min(abs(bottom_limit1 - Y));
+idx1 = bottom_idx1:top_idx1;
+aperture_size = length(idx1);
+aperture(idx1) = ones(1,aperture_size);
+c =  physconst('LightSpeed');
+lambda = c./freq;
+W = steervec(Y(bottom_idx1:top_idx1)'/lambda,[steering_angle1;0]);
+tr(bottom_idx1:top_idx1) = aperture(bottom_idx1:top_idx1).*W;
+aperture = zeros(size(Y));
+top_limit2 = 0.15;
+bottom_limit2 = -W0 + 0.15;
+[~,top_idx2] = min(abs(top_limit2 - Y));
+[~,bottom_idx2] = min(abs(bottom_limit2 - Y));
+idx2 = bottom_idx2:top_idx2;
+aperture_size = length(idx2);
+aperture(idx2) = ones(1,aperture_size);
+c =  physconst('LightSpeed');
+lambda = c./freq;
+W = steervec(Y(bottom_idx2:top_idx2)'/lambda,[steering_angle2;0]);
+tr(bottom_idx2:top_idx2) = aperture(bottom_idx2:top_idx2).*W;
+end
