@@ -7,3 +7,6 @@ In order to work directly with the GUI, you need to pull this repository and ope
 ## Setting Up Environmental Properties
 In the first part of the program, one can create the environment of interest by choosing the resolution and dimention and add as many blockages/reflectros with arbitrary properties to the environment.
 ![Environment](environment.PNG)
+
+## Adding Reflector/Blockgae
+In order to add a reflector/blockage, one can click on the **Add New Reflector/Blocker** which would pop up a new window. In the new window, the user can define the location and orientation of the the object (within the defined dimentions) along with the length and thickness of the object in the environment. **Power Ratio** determines the amount of power being reflected back with respect to the incident E field power. Power ration on 1 represent perfect reflector, while power ration of 0 represent complete blockage (absorber). Furthermore, there are options for adding roughness  and also RIS mode to the reflector. By determining the statistical 
