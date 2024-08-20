@@ -3,9 +3,11 @@
 
 ## Starting up the Graphic User Interface
 In order to work directly with the GUI, you need to pull this repository and open up the 	**main_app.mlapp** in **appdesigner** in MATLAB. appdesigner environment can be opened by running the `appdesigner` in the MATLAB command line. The main app can be set up by easily just running the program.
+
 ![startingup](/media/startingup.PNG)
 ## Setting Up Environmental Properties
 In the first part of the program, one can create the environment of interest by choosing the resolution and dimension and adding as many blockages/reflectors with arbitrary properties to the environment.
+
 ![Environment](/media/environment.PNG)
 
 ## Adding Reflector/Blockage
@@ -15,10 +17,18 @@ In order to add a reflector/blockage, one can click on the **Add New Reflector/B
 
 ## TX Antenna Array Configuration
 In order to configure TX antenna arrays, one should determine the frequency at which the simulation is intended to calculate near-field propagation. It should be noted that the resolution defined in environmental properties must be large enough to sample points with spacing less than half a wavelength $d<\lambda/2$. The default option to configure a TX array assumes the TX to be centered at $Y=0$ and the user can define the TX aperture in mm and also the phase configuration by choosing one of the built-in beam types namely as **Beam Steering**, **Focused Beam**, **Airy Beam**, and **Bessel Beam** and set the corresponding parameters. The other option is to set the phase configuration of TX array elements (centered at &Y=0&) manually by importing a text file containing the phase information. The third option is to add multiple TX antenna arrays at different locations in the $X=0$ plane and configure them with arbitrary phase configurations.
+
 <img src="/media/tx_env.PNG" alt="tx_env" width="500" style="float: left; margin-right: 10px;"/>
 <img src="/media/tx.PNG" alt="tx" width="300" style="float: left; margin-right: 10px;"/>
 
 ## Adding Multiple RX Antenna Arrays
 By clicking on the **Add New RX** button, one can configure the RX antenna dimension, location, orientation, and its number of elements to calculate the received power at the multi-UE scenario by running the simulation once. In default the RX antenna is assumed to be fully digital, however, one can set it to be an analog antenna array by importing the corresponding phase configurations as a text file.
+
 <img src="/media/rx_env.PNG" alt="rx_env" width="500" style="float: left; margin-right: 10px;"/>
 <img src="/media/rx.PNG" alt="rx" width="300" style="float: left; margin-right: 10px;"/>
+
+## Coverage Map and Received Power
+After running the simulation the calculated coverage map resulting from near field propagation would be visualized and saved as a text file containing the E field at each location based on the pre-defined resolution. One can change the coverage map visualization mode to be based on normalized magnitude or in db. For more options, you can right-click on the color bar in the figure.  
+
+## AI-enabled System Design
+This simulator is a perfect tool to collect data for AI-enabled solutions for different applications of near-field propagation. One can easily make scripts to collect data for various purposes, due to the source code availability of the core simulator. One example of generating a coverage map by interacting with the core near field propagation modeling function can be seen in **func_test.m** file. For more advanced settings you can also refer to the main function **near_field_propagation.m**.
