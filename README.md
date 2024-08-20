@@ -14,9 +14,10 @@ In order to add a reflector/blockage, one can click on the **Add New Reflector/B
 
 ## TX Antenna Array Configuration
 In order to configure TX antenna arrays, one should determine the frequency at which the simulation is intended to calculate near-field propagation. It should be noted that the resolution defined in environmental properties must be large enough to sample points with spacing less than half a wavelength $d<\lambda/2$. The default option to configure a TX array assumes the TX to be centered at $Y=0$ and the user can define the TX aperture in mm and also the phase configuration by choosing one of the built-in beam types namely as **Beam Steering**, **Focused Beam**, **Airy Beam**, and **Bessel Beam** and set the corresponding parameters. The other option is to set the phase configuration of TX array elements (centered at &Y=0&) manually by importing a text file containing the phase information. The third option is to add multiple TX antenna arrays at different locations in the $X=0$ plane and configure them with arbitrary phase configurations.
-<img src="/media/tx_env.PNG" alt="tx_env" width="800" style="float: left; margin-right: 10px;"/>
-<img src="/media/tx.PNG" alt="tx" width="250" style="float: left; margin-right: 10px;"/>
+<img src="/media/tx_env.PNG" alt="tx_env" width="500" style="float: left; margin-right: 10px;"/>
+<img src="/media/tx.PNG" alt="tx" width="300" style="float: left; margin-right: 10px;"/>
 
 ## Adding Multiple RX Antenna Arrays
 By clicking on the **Add New RX** button, one can configure the RX antenna dimension, location, orientation, and its number of elements to calculate the received power at the multi-UE scenario by running the simulation once. In default the RX antenna is assumed to be fully digital, however, one can set it to be an analog antenna array by importing the corresponding phase configurations as a text file.
+<img src="/media/rx_env.PNG" alt="rx_env" width="500" style="float: left; margin-right: 10px;"/>
 <img src="/media/rx.PNG" alt="rx" width="300" style="float: left; margin-right: 10px;"/>
