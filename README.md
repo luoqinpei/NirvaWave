@@ -10,6 +10,7 @@ In the first part of the program, one can create the environment of interest by 
 
 ## Adding Reflector/Blockage
 In order to add a reflector/blockage, one can click on the **Add New Reflector/Blocker** which would pop up a new window. In the new window, the user can define the location and orientation of the object (within the defined dimensions) along with the length and thickness of the object in the environment. **Power Ratio** determines the amount of power being reflected back with respect to the incident E field power. The power ratio of 1 represents perfect reflection, while the power ratio of 0 represents complete blockage (absorber). Furthermore, there are options to consider diffuse scattering by adding roughness parameters and also to place Reconfigurable Intelligent Surfaces as the reflectors by adding a text file that contains the designed phase shifts on the elements of the RIS. By determining the statistical properties of a rough surface $h_rms$ and $L_c$, the code would generate a random surface perturbation and it would be translated to the phase shifts introduced by rough scattering.
+
 <img src="/media/object.PNG" alt="object" width="400" style="float: left; margin-right: 10px;"/>
 
 ## TX Antenna Array Configuration
