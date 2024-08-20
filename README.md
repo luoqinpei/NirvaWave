@@ -8,7 +8,14 @@ In order to work directly with the GUI, you need to pull this repository and ope
 In the first part of the program, one can create the environment of interest by choosing the resolution and dimension and adding as many blockages/reflectors with arbitrary properties to the environment.
 ![Environment](/media/environment.PNG)
 
-## Adding Reflector/Blockgae
+## Adding Reflector/Blockage
 In order to add a reflector/blockage, one can click on the **Add New Reflector/Blocker** which would pop up a new window. In the new window, the user can define the location and orientation of the object (within the defined dimensions) along with the length and thickness of the object in the environment. **Power Ratio** determines the amount of power being reflected back with respect to the incident E field power. The power ratio of 1 represents perfect reflection, while the power ratio of 0 represents complete blockage (absorber). Furthermore, there are options to consider diffuse scattering by adding roughness parameters and also to place Reconfigurable Intelligent Surfaces as the reflectors by adding a text file that contains the designed phase shifts on the elements of the RIS. By determining the statistical properties of a rough surface $h_rms$ and $L_c$, the code would generate a random surface perturbation and it would be translated to the phase shifts introduced by rough scattering.
-![object](/media/object.PNG)
+<img src="/media/object.PNG" alt="object" width="400"/>
 
+## TX Antenna Array Configuration
+In order to configure TX antenna arrays, one should determine the frequency at which the simulation is intended to calculate near-field propagation. It should be noted that the resolution defined in environmental properties must be large enough to sample points with spacing less than half a wavelength $d<\lambda/2$. The default option to configure a TX array assumes the TX to be centered at $Y=0$ and the user can define the TX aperture in mm and also the phase configuration by choosing one of the built-in beam types namely as **Beam Steering**, **Focused Beam**, **Airy Beam**, and **Bessel Beam** and set the corresponding parameters. The other option is to set the phase configuration of TX array elements (centered at &Y=0&) manually by importing a text file containing the phase information. The third option is to add multiple TX antenna arrays at different locations in the $X=0$ plane and configure them with arbitrary phase configurations. 
+<img src="/media/tx" alt="tx" width="250"/>
+
+## Adding Multiple RX Antenna Arrays
+By clicking on the **Add New RX** button, one can configure the RX antenna dimension, location, orientation, and its number of elements to calculate the received power at the multi-UE scenario by running the simulation once. In default the RX antenna is assumed to be fully digital, however, one can set it to be an analog antenna array by importing the corresponding phase configurations as a text file.
+<img src="/media/rx" alt="rx" width="300"/>
