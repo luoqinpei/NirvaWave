@@ -1,6 +1,7 @@
 close all
 clear all
 clc
+addpath("../simulator/")
 maxNumCompThreads(48);
 zmin = 0.001;
 zmax = 2;
@@ -36,9 +37,9 @@ tr = beam_generation(W0,Y,Z,Beamtype,steering_angle,focal,freq,B_d,theta_s);
 E = tr.*E;
 phi_max = pi/2;
 RIS_phase = (rand(1, 350) * 2 * phi_max) - phi_max;
-writematrix(RIS_phase,'RIS_phase.txt');
+writematrix(RIS_phase,'../examples/RIS_phase.txt');
 %obj_list = [Ry_p,Rx_p,RL,thickness,theta,1,theta,0,10,0;-0.3,0.5,RL,thickness,0,1,0,0,10,0];
-RIS_files = ["rough_surf_0.5.txt"];
+RIS_files = ["../examples/rough_surf_0.5.txt"];
 %obj_list = [0,0.5,RL,thickness,0,1,0,0,10,0;-0.25,0.7,RL,thickness,90,1,90,0,10,0;Ry_p,Rx_p,RL,thickness,theta,1,theta,0,10,0];
 %obj_list = [Ry_p,Rx_p,RL,thickness,theta,1,theta,0,3,0;0,0.5,RL,thickness,theta,1,theta,0,3,0];
 obj_list = [Ry_p,Rx_p,RL,thickness,theta,1,theta,0,3,1];
