@@ -25,9 +25,6 @@ function object_list_u = transform_obj(ref,obj_list,mirror)
             end
             loc = R*([Rx_p;Ry_p]-[Rx_r;Ry_r]);
             object_list_u(i,:) = [loc(2),loc(1),RL,thickness,thetaT,power_ref,theta_p,hrms,Lc,RIS_mode];
-            % if loc(1)<0
-            %     object_list_u(i,:) = [];
-            % end
         else
             theta_R = deg2rad(theta_r)-pi/2;
             R = [cos(theta_R), -sin(theta_R); sin(theta_R), cos(theta_R)];
@@ -35,13 +32,8 @@ function object_list_u = transform_obj(ref,obj_list,mirror)
             loc = R*([Rx_p;Ry_p]-[Rx_r;Ry_r]);
             if thetaT>90
                 thetaT = thetaT-180;
-            % elseif thetaT<-90
-            %     thetaT = -abs(thetaT)+180;
             end
             object_list_u(i,:) = [-loc(2),loc(1),RL,thickness,thetaT,power_ref,theta_p,hrms,Lc,RIS_mode];
-            % if loc(1)<0
-            %     object_list_u(i,:) = [];
-            % end
         end
         
     end

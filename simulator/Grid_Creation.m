@@ -3,7 +3,6 @@ function [L,Y,Z,res] = Grid_Creation(freq,zmin,zmax,z_length,Y_bound,varargin)
     if(~isempty(varargin))
         z_metric = 'manual';
         res = varargin{1};
-        disp('Transverse (Y) Resolution Manually Configured')
     else
         c =  physconst('LightSpeed');
         lambda = c./(freq);
