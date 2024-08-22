@@ -44,7 +44,7 @@ After running the simulation the calculated coverage map resulting from near fie
 ## AI-enabled System Design
 This simulator is a perfect tool to collect data for AI-enabled solutions for different applications of near-field propagation. One can easily make scripts to collect data for various purposes, due to the source code availability of the core simulator. One example of generating a coverage map by interacting with the core near field propagation modeling function can be seen in [func_test.m](scripts/func_test.m) file. For more advanced settings you can also refer to the main function [near_field_propagation.m](simulator/near_field_propagation.m).
 
-##License and Citation
+## License and Citation
 X is MIT licensed, as found in the [LICENSE](./LICENSE) file.
 
 If you use this simulator, please cite it as:
