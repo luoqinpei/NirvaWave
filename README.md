@@ -33,13 +33,13 @@ To configure TX antenna arrays, one should determine the frequency at which the 
 <img src="doc/tx.PNG" alt="tx" width="300" style="float: left; margin-right: 10px;"/>
 
 ### Adding Multiple RX Antenna Arrays
-By clicking on the **Add New RX** button, one can configure the RX antenna dimension, location, orientation, and its number of elements to calculate the received power at the multi-UE scenario by running the simulation once. In default the RX antenna is assumed to be fully digital, however, one can set it to be an analog antenna array by importing the corresponding phase configurations as a text file. The text file should contain the desired phase shifts on each antenna array element in radians and separated by line.  [TODO!: Example file]
+By clicking on the **Add New RX** button, one can configure the RX antenna dimension, location, orientation, and its number of elements to calculate the received power at the multi-UE scenario by running the simulation once. In default the RX antenna is assumed to be fully digital, however, one can set it to be an analog antenna array by importing the corresponding phase configurations as a text file. The text file should contain the desired phase shifts on each antenna array element in radians and separated by line.
 
 <img src="doc/rx_env.PNG" alt="rx_env" width="500" style="float: left; margin-right: 10px;"/>
 <img src="doc/rx.PNG" alt="rx" width="300" style="float: left; margin-right: 10px;"/>
 
 ### Coverage Map and Received Power
-After running the simulation the calculated coverage map resulting from near field propagation would be visualized and saved as a text file containing the E field at each location based on the pre-defined resolution. Input the desired file name without any extensions. [TODO! Consider saving the file as a .bin file in interleaved IQ with i32 to improve performance when reading the file later. ] One can change the coverage map visualization mode to be based on normalized magnitude or in db. For more options, you can right-click on the color bar in the figure.  
+After running the simulation the calculated coverage map resulting from near field propagation would be visualized and saved as a text file containing the E field at each location based on the pre-defined resolution. Input the desired file name without any extensions. One can change the coverage map visualization mode to be based on normalized magnitude or in db. For more options, you can right-click on the color bar in the figure.  
 
 ## AI-enabled System Design
 This simulator is a perfect tool to collect data for AI-enabled solutions for different applications of near-field propagation. One can easily make scripts to collect data for various purposes, due to the source code availability of the core simulator. One example of generating a coverage map by interacting with the core near field propagation modeling function can be seen in [func_test.m](scripts/func_test.m) file. For more advanced settings you can also refer to the main function [near_field_propagation.m](simulator/near_field_propagation.m).
