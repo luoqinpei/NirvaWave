@@ -8,7 +8,7 @@ function M = ref_OB(Z,Y,Ref_loc,theta,L,t,len_z,len_y)
     [~, ref_bot_y] = min(abs(Ref_loc(1)+L*sin(theta)/2- Y));
     tickness_Z = abs(floor(t*length(Z)*sin(theta)/len_z));
     tickness_Y = abs(floor(t*length(Y)*sin(pi/2-theta)/len_y));
-    att = 0.5;
+    att = 0.8;
 
     delta_Y = ref_top_y-ref_bot_y;
     delta_Z = ref_top_z-ref_bot_z;
