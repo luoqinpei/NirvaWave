@@ -4,7 +4,7 @@
 ## Setup and Installation
 To start the simulator, first clone the repository:
 ```
-$ git clone https://github.com/vahidyazdnian1378/Near-Field-Propagation-Simulator.git
+$ git clone https://github.com/vahidyazdnian1378/NirvaWave.git
 ```
 
 The simulator was implemented in Matlab with GUI. Make sure that [MATLAB](https://de.mathworks.com/products/matlab.html) with version `>2022a`. For intensive computations at high resolutions, it is recommended to run the simulation on a server with sufficient memory and processing power. 
