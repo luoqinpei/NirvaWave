@@ -1,7 +1,5 @@
 function B_transformed = transforam_cord(Z,Y,B,theta,tx,ty,mirror)
     [Z_grid, Y_grid] = meshgrid(Z, Y);
-    %B = [zeros(size(B)),B];
-    % Flatten the coordinate grids for easier transformation
     Z_flat = Z_grid(:)-tx;
     Y_flat = Y_grid(:)-ty;
     if mirror==true

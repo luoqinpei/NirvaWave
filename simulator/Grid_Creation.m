@@ -11,7 +11,6 @@ function [L,Y,Z,res] = Grid_Creation(freq,zmin,zmax,z_length,Y_bound,varargin)
     %% coordinates points creation
     Z = linspace(zmin,zmax,z_length);
     if(strcmp(z_metric,'manual'))
-        %res= 1000;
         Y= linspace(-Y_bound,Y_bound,res)';
         L = Y_bound*2;
     elseif(strcmp(z_metric,'critical'))

@@ -1,7 +1,6 @@
 
 function E_maxtrix = BeamReflectionD(E,M,H,freq,Y,Z)
     %% Fixed settings
-%     E0= 1;
     WF_gen = 'Rayleigh_mode';
     %WF_gen = 'fresnel_mode';
     %% Source
