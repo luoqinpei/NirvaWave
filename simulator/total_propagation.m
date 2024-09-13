@@ -79,11 +79,13 @@ function E_final = total_propagation(zmax,L,Y,Z,Zm,res,z_res,freq,Y_bound,Ep,obj
                 E_reflected = E_reflected .* exp(1i * random_phases);
                 if RIS_mode==1
                     f = readmatrix(RIS_phase_file);
-                    RIS_phase_shift = 2*pi.*f/lambda/1000;
+                    RIS_phase_shift = 2*pi.*f(1,:)/lambda/1000;
                     assert(num_elements <= length(RIS_phase_shift), 'Not enough phase elements have been specified');
                     indices = round(linspace(1, length(RIS_phase_shift), num_elements));
                     RIS_phase = RIS_phase_shift(indices);
-                    E_reflected = E_reflected .* exp(1i * RIS_phase');
+                    RIS_amp_m = f(2,:);
+                    RIS_amp = RIS_amp_m(indices);
+                    E_reflected = E_reflected .* exp(1i * RIS_phase').*(RIS_amp');
                 end
                 E_reflected_plane = zeros(res,1);
                 E_reflected_plane(floor(res/2)-length(E_reflected)/2:floor(res/2)+length(E_reflected)/2-1)...
