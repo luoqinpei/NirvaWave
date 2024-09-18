@@ -46,3 +46,13 @@ This simulator is a perfect tool to collect data for AI-enabled solutions for di
 
 ## License and Citation
 NirvaWave simulator is MIT licensed, as found in the [LICENSE](./LICENSE) file.
+If you use this simulator in your work, please cite it as follows:
+
+```bibtex
+@article{Yazdnian2024NirvaWave,
+  author = {Yazdnian, Vahid and Ghasempour, Yasaman},
+  title = {NirvaWave: An Accurate and Efficient Near Field Wave Propagation Simulator for 6G and Beyond},
+  journal = {arXiv preprint arXiv:2409.11293},
+  year = {2024},
+  url = {https://arxiv.org/abs/2409.11293}
+}
