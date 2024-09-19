@@ -12,7 +12,7 @@ function E_final = total_propagation(zmax,L,Y,Z,Zm,res,z_res,freq,Y_bound,Ep,obj
         for i=1:obj_length
             Ry_p = obj_list(i,1);
             Rx_p = obj_list(i,2);
-            if Rx_p>0&&Rx_p<2
+            if Rx_p>0&&Rx_p<zmax/2
             RL = obj_list(i,3);
             thickness = obj_list(i,4);
             theta = obj_list(i,5);
