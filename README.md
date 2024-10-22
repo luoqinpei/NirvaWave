@@ -51,7 +51,7 @@ If you use this simulator in your work, please cite it as follows:
 ```bibtex
 @article{yazdnian2024nirvawave,
   title={NirvaWave: An Accurate and Efficient Near Field Wave Propagation Simulator for 6G and Beyond},
-  author={Yazdnian, Vahid and Ghasempour, Yasaman},
+  author={Vahid Yazdnian and Atsutse Kludze and Yasaman Ghasempour},
   journal={arXiv preprint arXiv:2409.11293},
   year={2024}
 }
